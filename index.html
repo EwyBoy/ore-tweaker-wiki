@@ -1,10 +1,878 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ore Tweaker</title>
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ore Tweaker</title>
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/showcase.css"/>
+    <script src="https://kit.fontawesome.com/2828f7885a.js"
+            integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+            crossorigin="anonymous"></script>
+    <script src="scripts/curseforge.js"></script>
+</head>
 
-    </body>
+<body onload="initialize()">
+<!-- Begin Preloader -->
+<div class="preloader-wrapper">
+    <div class="preloader">
+        <img src="assets/loading.gif" width="100%" height="100%" alt="Loading"/>
+    </div>
+</div>
+<!-- End Preloader-->
+<!-- Begin Scroll Up Button -->
+
+<form action="#home">
+    <button id="toTop" title="Go to top">
+        <i class="fas fa-angle-up"></i>
+    </button>
+</form>
+<!-- End Scroll Up Button -->
+
+<!-- Begin Header -->
+<div class="header-wrapper" id="home">
+    <!-- Begin Hero -->
+    <section class="hero is-large">
+        <!-- Begin Mobile Nav -->
+        <nav class="navbar is-transparent is-hidden-desktop">
+            <!-- Begin Burger Menu -->
+            <div class="navbar-brand">
+                <div class="navbar-burger burger" data-target="mobile-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!-- End Burger Menu -->
+            <div id="mobile-nav" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="navbar-item" href="#home">
+                            Home
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-item" href="#about-me">
+                            About Me
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-item" href="#services">
+                            Services
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-item" href="#skills">
+                            Skills
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="navbar-item" href="#my-work">
+                            My Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Mobile Nav -->
+        <!-- Begin Hero Content-->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="subtitle">Hey there, I'm</h1>
+                <h2 class="title">Ewy</h2>
+                <h1 class="subtitle profession">A Minecraft Modder</h1>
+            </div>
+        </div>
+        <!-- End Hero Content-->
+        <!-- Begin Hero Menu -->
+        <div class="hero-foot ">
+            <div class="hero-foot--wrapper">
+                <div class="columns">
+                    <div class="column is-12 hero-menu-desktop has-text-centered">
+                        <ul>
+                            <li class="is-active">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about-me">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#my-work">Mods</a>
+                            </li>
+                            <li>
+                                <a href="#services">Skills</a>
+                            </li>
+                            <li>
+                                <a href="#skills">Experience</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Menu -->
+    </section>
+    <!-- End Hero -->
+</div>
+<!-- End Header -->
+
+<!-- Begin Main Content -->
+<div class="main-content">
+    <!-- Begin About Me Section -->
+    <div class="section-light about-me" id="about-me">
+        <div class="container">
+            <div class="column is-12 about-me">
+                <h1 class="title has-text-centered section-title">About Me</h1>
+            </div>
+            <div class="columns is-multiline">
+                <div
+                        class="column is-6 has-vertically-aligned-content"
+                        data-aos="fade-right"
+                >
+                    <p class="is-larger"><strong>Eivind Norling</strong></p>
+                    <br/>
+                    <p>
+                        My name is Eivind Norling aka Ewy or EwyBoy.
+                        I'm 25 years old, and I have been developing Minecraft mods for way over 10 years now.
+                        Over the years my mods have in total accumulated over 60,000,000 downloads across 35 different
+                        projects on CurseForge.
+                        When not making mods for Minecraft I am studying applied computer science at University of
+                        Bergen.
+                    </p>
+                    <br/>
+                    <div class="is-divider"></div>
+                    <div class="columns about-links">
+                        <div class="column">
+                            <p class="heading">
+                                <strong>Email Me</strong>
+                            </p>
+                            <p class="subheading">
+                                eivind.norling@hotmail.com
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p class="heading">
+                                <strong>GitHub portfolio</strong>
+                            </p>
+                            <p class="subheading">
+                                <a href="https://github.com/ewyboy">GitHub-Projects</a>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p class="heading">
+                                <strong>Mod portfolio</strong>
+                            </p>
+                            <p class="subheading">
+                                <a href="https://www.curseforge.com/members/EwyBoy/projects">Minecraft Mods</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6 right-image " data-aos="fade-left">
+                    <img
+                            class="is-rounded"
+                            src="assets/irl.png"
+                            alt=""
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Me Content -->
+
+    <!-- Begin Work Content -->
+    <div class="section-dark my-work" id="my-work">
+        <div class="container">
+            <div
+                    class="columns is-multiline"
+                    data-aos="fade-in"
+                    data-aos-easing="linear"
+            >
+                <div class="column is-12">
+                    <h1 class="title has-text-centered section-title">My Work</h1>
+                </div>
+
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/49/939/636084153712967304.jpeg"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/fabforge.png" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">World Stripper</p>
+                                        <p class="subtitle is-6" id="250603">placeholder text</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/35/543/635926311974223723.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Ore Tweaker</p>
+                                        <p class="subtitle is-6" id="242436">placeholder text</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Disable, tweak and add your own ore generation features.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/45/1/636038642804536606.jpeg"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Seed Drop</p>
+                                        <p class="subtitle is-6" id="247369">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/99/919/636311412504245013.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Bibliotheca</p>
+                                        <p class="subtitle is-6" id="268210">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/242/703/637135891774005530.jpeg"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Quick Harvest</p>
+                                        <p class="subtitle is-6" id="355143">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/84/711/636197313253047938.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">ITank</p>
+                                        <p class="subtitle is-6" id="256991">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/14/112/635585668297351886.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Floating Rails</p>
+                                        <p class="subtitle is-6" id="227277">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/51/152/636100528197204661.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">B.A.S.E</p>
+                                        <p class="subtitle is-6" id="246996">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/38/35/635960580193654342.jpeg"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">TeamUp</p>
+                                        <p class="subtitle is-6" id="243951">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/16/63/635639421729289567.jpeg"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Rainmaker</p>
+                                        <p class="subtitle is-6" id="228809">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/133/831/636486755336531366.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Block Tweaker</p>
+                                        <p class="subtitle is-6" id="283415">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="assets/workshop.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Workshop</p>
+                                        <p class="subtitle is-6" id="254916">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/31/122/635875245379647761.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Clay WorldGen</p>
+                                        <p class="subtitle is-6" id="227276">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/14/958/635609771355465818.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">CHA&S</p>
+                                        <p class="subtitle is-6" id="224841">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/26/437/635791822738468560.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Ewy's Workshop</p>
+                                        <p class="subtitle is-6" id="236564">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column is-3">
+                    <a href="#">
+                        <div class="card work-item">
+                            <div class="card-image">
+                                <figure class="image is-3by3">
+                                    <img src="https://media.forgecdn.net/avatars/28/200/635823921751170674.png"
+                                         alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 work-item">
+                                            <img src="assets/forge.jpg" alt="Forge">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Hammer Time</p>
+                                        <p class="subtitle is-6" id="237695">placeholder text</p>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    Strips away blocks to reveal the underground world gen.
+                                    <br>
+                                    <br>
+                                    <strong>Released: Sep 2, 2016</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work Content -->
+
+    <!-- Begin Services Content -->
+    <div class="section-color services" id="services">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div
+                        class="column is-12 about-me"
+                        data-aos="fade-in"
+                        data-aos-easing="linear"
+                >
+                    <h1 class="title has-text-centered section-title">The things I do</h1>
+
+                    <h2 class="subtitle">
+                        I am a one-man band when it comes to creating mods and for the most part I work alone. I have
+                        chosen to learn a bit of everything rather than specializing in one field.
+                    </h2>
+
+                    <h2 class="subtitle has-text-centered">
+                        Here is the things I do
+                    </h2>
+
+                    <br/>
+                </div>
+                <div class="columns is-12">
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fas fa-cube fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            I make my own 3D models from scratch in BlockBench.
+                        </h2>
+                    </div>
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fas fa-paint-brush fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            I create all my textures, logos and pixel art from scratch using PhotoShop.
+                        </h2>
+                    </div>
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fas fa-headphones-alt fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            I learned sound remastering and editing while running my own podcast.
+                        </h2>
+                    </div>
+                </div>
+                <hr/>
+                <div class="columns is-12">
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fas fa-books fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            I have created my own libraries to automate anything you need to create a Minecraft mod.
+                        </h2>
+                    </div>
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fab fa-twitch fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            All my development is streamed live to Twitch so people can tag along and perhaps learn
+                            something.
+                        </h2>
+                    </div>
+                    <div
+                            class="column is-4 has-text-centered"
+                            data-aos="fade-in"
+                            data-aos-easing="linear"
+                    >
+                        <i class="fas fa-file-code fa-3x"></i>
+                        <hr/>
+                        <h2>
+                            All my mods, assets and resources are open-source and distributed under the MIT-License.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services Content -->
+
+    <!-- Begin Skills Content -->
+    <div class="section-light skills" id="skills">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-12 about-me">
+                    <h1 class="title has-text-centered section-title">Skills</h1>
+                </div>
+
+                <div
+                        class="column is-6"
+                        data-aos="fade-in"
+                        data-aos-easing="linear"
+                >
+                    <h1>Java / Minecraft Modding</h1>
+                    <progress class="progress" value="95" max="100">95%</progress>
+                    <h1>Web Development</h1>
+                    <progress class="progress" value="70" max="100">70%</progress>
+                    <h1>C# / Unity</h1>
+                    <progress class="progress" value="75" max="100">75%</progress>
+                    <h1>Python</h1>
+                    <progress class="progress" value="85" max="100">85%</progress>
+                </div>
+
+                <div
+                        class="column is-6"
+                        data-aos="fade-in"
+                        data-aos-easing="linear"
+                >
+                    <h1>Adobe Photoshop</h1>
+                    <progress class="progress" value="80" max="100">80%</progress>
+                    <h1>Adobe Premiere</h1>
+                    <progress class="progress" value="65" max="100">65%</progress>
+                    <h1>Adobe Audition</h1>
+                    <progress class="progress" value="70" max="100">70%</progress>
+                    <h1>Blockbench</h1>
+                    <progress class="progress" value="90" max="100">90%</progress>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Skills Content -->
+</div>
+<!-- End Main Content -->
+
+<!-- Begin Footer -->
+<div class="footer">
+    <p>
+        <strong class="white">Webpage</strong> by Eivind Norling. The <a href="https://github.com/EwyBoy/Webpage">source code</a> for this webpage is licensed under the
+        <a href="https://opensource.org/licenses/mit-license.php">MIT License</a>
+    </p>
+</div>
+<!-- End Footer -->
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/showcase.js"></script>
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        easing: "ease-out",
+        duration: 800,
+    });
+</script>
+</body>
 </html>
